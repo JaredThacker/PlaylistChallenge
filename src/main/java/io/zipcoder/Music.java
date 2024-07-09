@@ -12,6 +12,7 @@ public class Music {
     }
 
     public Integer selection(Integer startIndex, String selection){
+
         int buttonPresses = 0;
         int buttonPressesBack = 0;
 
@@ -22,6 +23,7 @@ public class Music {
             playlistClone[j] = playList[i];
             j++;
         }
+
         playlistClone[0] = playList[0];
 
         for (int i = startIndex; i < playlistClone.length; i++){
@@ -39,7 +41,7 @@ public class Music {
                 buttonPresses++;
             }
         }
+
         return (buttonPressesBack > 0 && buttonPressesBack < buttonPresses) ? buttonPressesBack : buttonPresses;
     }
-
 }
