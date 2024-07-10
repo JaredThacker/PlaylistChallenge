@@ -34,6 +34,6 @@ public class Music {
             }
         }
 
-        return (buttonPressesBack < buttonPresses) ? buttonPressesBack : buttonPresses;
+        return Math.min(buttonPressesBack, buttonPresses);
     }
 }
