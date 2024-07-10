@@ -16,21 +16,14 @@ public class Music {
         int buttonPresses = 0;
         int buttonPressesBack = 0;
 
-        String[] playlistClone = new String[playList.length];
-        playlistClone[0] = playList[0];
-        int j = 1;
-
-        for(int i = playList.length - 1; i > 0; i--) {
-            playlistClone[j] = playList[i];
-            j++;
-        }
-
-        for (int i = startIndex; i < playlistClone.length; i++) {
-            if(playlistClone[i].equals(selection)){
+        for (int i = startIndex; i >= 0; i--){
+            if(playList[i].equals(selection)){
                 break;
-            } else {
-                buttonPressesBack++;
             }
+            else if(i == 0){
+                i = playList.length;
+            }
+            buttonPressesBack++;
         }
 
         for (int i = startIndex; i < playList.length; i++) {
