@@ -34,6 +34,6 @@ public class Music {
             }
         }
 
-        return (buttonPressesBack > 0 && buttonPressesBack < buttonPresses) ? buttonPressesBack : buttonPresses;
+        return (buttonPressesBack < buttonPresses) ? buttonPressesBack : buttonPresses;
     }
 }
